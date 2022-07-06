@@ -1,5 +1,5 @@
 ﻿using System;
-namespace quiz4
+namespace quiz04
 {
     class Program
     {

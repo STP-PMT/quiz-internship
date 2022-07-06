@@ -1,4 +1,4 @@
-﻿namespace quiz5
+﻿namespace quiz05
 {
     class Program
     {
