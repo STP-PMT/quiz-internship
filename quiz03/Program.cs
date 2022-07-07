@@ -44,9 +44,9 @@ namespace quiz03
                     }
                     continue;
                 }
-                else if(i+1 < num.Length)
+               
+                 if(i+1 < num.Length)
                 {
-                  
                     if (num[i+1] -num[i]  != 1)
                     {
                         result+=","+num[i];
@@ -54,13 +54,15 @@ namespace quiz03
                     else
                     {
                         result+=","+num[i]+"-"+num[i+1];
+                        continue;
                     }
                     
+                    if (i+1 ==  num.Length-1)
+                    {
+                        result+="-"+num[i+1];
+                    }
                 }
-                else
-                {
-                    result+=","+num[i];
-                }
+             
             }
             Console.WriteLine(result);
         }
