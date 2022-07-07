@@ -38,9 +38,12 @@ namespace quiz03
             { 
                 if(num[i] - num[i-1] == 1)
                 {
-                    if(i+1 ==  num.Length-1)
+                    if (i+1 < num.Length)
                     {
-                        result+="-"+num[i+1];
+                        if (i+1 ==  num.Length-1||num[i+1]-num[i]!=1)
+                        {
+                            result+="-"+num[i];
+                        }
                     }
                     continue;
                 }
@@ -53,10 +56,8 @@ namespace quiz03
                     }
                     else
                     {
-                        result+=","+num[i]+"-"+num[i+1];
-                        continue;
+                        result+=","+num[i];
                     }
-                    
                     if (i+1 ==  num.Length-1)
                     {
                         result+="-"+num[i+1];
