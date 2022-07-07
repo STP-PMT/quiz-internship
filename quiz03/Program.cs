@@ -32,14 +32,37 @@ namespace quiz03
             }
             int[] num = arrays.ToArray();
             int n = 0;
+            string result = num[0]+"";
             
-            
-            for (int i = 0; i < num.Length; i++)
+            for (int i = 1; i < num.Length; i++)
             { 
-                if(num[i]+1 == num[])
+                if(num[i] - num[i-1] == 1)
+                {
+                    if(i+1 ==  num.Length-1)
+                    {
+                        result+="-"+num[i+1];
+                    }
+                    continue;
+                }
+                else if(i+1 < num.Length)
+                {
+                  
+                    if (num[i+1] -num[i]  != 1)
+                    {
+                        result+=","+num[i];
+                    }
+                    else
+                    {
+                        result+=","+num[i]+"-"+num[i+1];
+                    }
+                    
+                }
+                else
+                {
+                    result+=","+num[i];
+                }
             }
-            
+            Console.WriteLine(result);
         }
-       
     }
 }
